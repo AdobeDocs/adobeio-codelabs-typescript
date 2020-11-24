@@ -1,29 +1,19 @@
-# Adobe I/O CodeLabs template
+# Using Typescript with Project Firefly
 
-## Getting started 
-
-Click on the "Use this template" button to copy the template to your namespace. 
-
-The codelab entry point is the [README](README.md). You can put your codelab content including assets under the [lessons](/lessons) directory. The codelab [manifest.json](manifest.json) holds the navigation information and more. Link your lessons in that file in order to render the navigation.
-
-## Preview codelab locally
-
-The template codelab is based on the Project Helix https://www.project-helix.io/. Follow instructions as explained.
-
-`npm i -g @adobe/helix-cli && hlx up` is enough to get you started. Make sure to have at least `npm@6.14.x` installed and an initial commit. 
-
-## Share codelab URL
-
-You can visit https://[REPO_NAME]-[REPO_OWNER].project-helix.page to see it running.
-
-Demo: https://adobeio-codelabs-template-adobedocs.project-helix.page/ 
-
-Make sure to push your changes before sharing the URL.
-
-## Contribute to Adobe I/O CodeLabs
-
-Once your codelab is ready, submit a PR to add it to the index at https://github.com/AdobeDocs/adobeio-codelabs/blob/gh-pages/actions/index.json  
+This codelab will guide you through creating a headless app using [Project Firefly](https://github.com/AdobeDocs/project-firefly) the twist is that instead of using Javascript we will be using Typesscript.   
 
 
+- Do you like a little more structure in your Firefly project? 
+- Does the thought of loosly typed code make you loose sleep?
+- Do you enjoy better refactorying tooling?
+- Does having interfaces, namespaces, generics, abstract classes, data modifiers, optionals, function overloading, decorators, type utils, and the readonly keyword sound like it would make your project better?    
 
-  
+
+If you answered yes to any of the questions above then I think you should investigate using Typescript with Project Firefly.      
+
+![Typescript](lessons/assets/ts-logo-256.svg)  
+
+The project source code of the codelab is available [here](https://github.com/AdobeDocs/adobeio-codelabs-typescript)
+
+
+Next: [Requirements](/lessons/requirements.md)

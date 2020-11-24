@@ -1,11 +1,12 @@
 ## Requirements
 
-This codelab is useful for anyone who are getting started with developing Firefly apps.
+This codelab is useful for both the skilled and begining Project Firefly developers.  
 
 ### Required skills
 
 * **Required:** programming skills in any language
-* *Optional:* basic knowledge with Javascript and Node.js
+* *Optional:* basic knowledge of Typescript
+* *Optional:* basic understanding of Node.js based development 
 
 ### Pre-requisites
 
@@ -15,10 +16,9 @@ If not already done, you should follow the below links to have your environment 
 * [Setting up Your Environment](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md)
 * [Creating your First Firefly App](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md)
 
-### Codelab environment
+* [Install Typescript](https://www.typescriptlang.org/#installation)  Typicaly done with 
+```Shell
+npm install -g typescript
+```
 
-In addition to above pre-requisites, you'll need:
-
-* A
-* B
-* C
+[Next](lesson1.md)

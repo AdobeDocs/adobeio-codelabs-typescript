@@ -1,4 +1,4 @@
-## Lesson 2: Write your app
+## Lesson 2: Converting application to Typescript
 
 # H1
 ## H2
