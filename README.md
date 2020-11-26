@@ -1,4 +1,4 @@
-# Using Typescript with Project Firefly
+# Using Typescript to develop actions in Project Firefly
 
 This codelab will guide you through creating a headless app using [Project Firefly](https://github.com/AdobeDocs/project-firefly) the twist is that instead of using Javascript we will be using Typesscript.   
 
