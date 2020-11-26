@@ -115,8 +115,55 @@ When your done your package.json scripts section should look simular to this
   }
 ```
 
-## Step four: test the new setup out 
+## Step four: test and modify gitignore
 
+To avoid checking in transpiled output you will want to modify **.gitignore** to include the TypeScript output directory.  In this case its the  actions directory so we will add that to the **.gitignore** config.
+The contents of **.gitignore** should look simular to this when your done.
+```javascript
+
+# package directories
+node_modules
+jspm_packages
+
+# build
+build
+dist
+.manifest-dist.yml
+
+# Config
+config.json
+.env*
+
+# Adobe I/O console config
+console.json
+
+# Test output
+junit.xml
+
+# IDE & Temp
+.cache
+.idea
+.nyc_output
+.vscode
+coverage
+.aws.tmp.creds.json
+.wskdebug.props.tmp
+
+# OSX
+.DS_Store
+
+# yeoman
+.yo-repository
+
+# logs folder for aio-run-detached
+logs
+
+# ignore the build output
+actions
+
+```
+
+Now lets try out the build by running the command **aio app run**
 
 
 Next lesson: [Well done](welldone.md)
