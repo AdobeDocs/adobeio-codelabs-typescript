@@ -13,7 +13,7 @@ If you answered yes to any of the questions above then I think you should invest
 
 ![Typescript](lessons/assets/ts-logo-256.svg)  
 
-The project source code of the codelab is available [here](https://github.com/AdobeDocs/adobeio-codelabs-typescript)
+The project source code of the codelab is available [here](https://github.com/AdobeDocs/adobeio-samples-typescript)
 
 
 Next: [Requirements](/lessons/requirements.md)
