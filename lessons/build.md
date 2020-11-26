@@ -15,7 +15,7 @@ Add in typescript module
 npm install typescript --save-dev
 ```
 
-**Optional**
+**Optional: Install type libraries and lint plugin**  
 Install some standard type librarys
 ```bash
 npm install "@types/mime-types" --save-dev
