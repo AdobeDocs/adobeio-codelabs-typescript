@@ -218,6 +218,12 @@ actions
 ```
 
 Now lets try out the build by running the command **aio app run**
+![AIO Run](lessons/assets/aio_run.png)
+
+
 If you installed the optional lint plugins you will also be able to run **npm run lint** or **npm run lint-fix**
+![NPM Lint](lessons/assets/lint.png)
+We have 16 Warnings to address but thats not a bad start. 
+
 
 [Next](welldone.md)

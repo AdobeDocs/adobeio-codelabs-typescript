@@ -4,6 +4,7 @@
 When we first generated the project the aio CLI created some default directorys for us to use and some boilerplate code as well.  We need to move this boilerplate and convert it to TypeScript. 
 
 First step is to rename the **actions** folder and rename it to **actions-src**.  
+![Rename](lessons/assets/folder_move.png)
 
 ## Step two: convert the code
 We now need to convert the boilerplate code from Javascript to TypeScript.
@@ -15,9 +16,11 @@ To convert these two files we start with changing the file extension from .js to
 actions/tsaction/index.ts
 actions/utils.ts
 
-Now we need to modify the files starting with utils.ts
+![TS to JS](lessons/assets/rename_js_ts.png)
+
+Now we need to modify the files starting with **utils.ts**
 In this file we need to change all the functions to have an export keyword in front of them and we will remove the exports statement at the end of the file.
-Here is the final utils.ts
+Here is the final **utils.ts**
 ```javascript
 /* 
 * <license header>
@@ -167,4 +170,4 @@ export async function main (params) {
 Lastly we need to remove the exports statement from the end of the file.  Remove the line ***exports.main = main*** from the file.  We no longer need this export since we are exporting the function. 
 
 
-Next lesson: [Setup the build](build.md)
+[Next](build.md)
