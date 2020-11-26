@@ -10,6 +10,60 @@ To install this npm module issue the following command from inside your projects
 npm install shx --save-dev
 ```
 
+Add in typescript module
+```bash
+npm install typescript --save-dev
+```
+
+**Optional**
+Install some standard type librarys
+```bash
+npm install "@types/mime-types" --save-dev
+npm install "@types/node-fetch" --save-dev
+npm install "@types/node" --save-dev
+```
+
+Install the TypeScript lint plugin
+```bash
+npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+Add lint config and ignore
+Create a new file in your project root named **.eslintrc**
+In the new **.eslintrc** file put the following content  
+```javascript
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
+  }
+```
+
+Create a new file in your project root named **.eslintignore**
+In the new **.eslintignore** file put the following content  
+```javascript
+node_modules
+actions
+
+# ignore web src if it exists
+web-src
+```
+
+Add lint scripts to package.json
+In the projects **package.json** add in the following lines to the scripts
+```javascript
+    "lint": "eslint \"actions-src/**/*.{js,ts}\" ",
+    "lint-fix": "eslint \"actions-src/**/*.{js,ts}\" --quiet --fix"
+```
+
+
 ## Step two: modify the build hooks
 TypeScript will need some instructions on how you want it to transpile your TypeScript into Javascript and where to output it and all the nifty options to use.
 In your project directory create the following file **tsconfig.json** 
@@ -164,6 +218,6 @@ actions
 ```
 
 Now lets try out the build by running the command **aio app run**
+If you installed the optional lint plugins you will also be able to run **npm run lint** or **npm run lint-fix**
 
-
-Next lesson: [Well done](welldone.md)
+[Next](welldone.md)
