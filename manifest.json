@@ -1,6 +1,6 @@
 {
-  "title": "CodeLab title",
-  "repository": "https://github.com/AdobeDocs/adobeio-codelabs-template",
+  "title": "Using TypeScript to develop in Project Firefly",
+  "repository": "https://github.com/AdobeDocs/adobeio-codelabs-typescript",
   "navigation": [{
     "title": "Introduction",
     "url": "/README"
@@ -11,9 +11,15 @@
     "title": "Lesson 1: Bootstrap your app",
     "url": "/lessons/lesson1"
   }, {
-    "title": "Lesson 2: Write your app",
-    "url": "/lessons/lesson2"
+    "title": "Lesson 2: Converting application to TypeScript",
+    "url": "/lessons/conversion"
   }, {
+    "title": "Lesson 3: Tweaking the build to support TypeScript",
+    "url": "/lessons/build"
+  }, {
+    "title": "Lesson 4: Add TypeScript support for web-src",
+    "url": "/lessons/frontend"
+  },{
     "title": "Well done",
     "url": "/lessons/welldone"
   }]

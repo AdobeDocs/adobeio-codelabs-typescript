@@ -2,4 +2,6 @@
 
 You have successfully completed the codelab and learnt how to use TypeScript to make your actions easier to develop and debug.
 
-Congrats
+### What's next ?
+
+Check out other useful codelabs for your projects at [Adobe I/O Codelabs website](https://adobedocs.github.io/adobeio-codelabs).

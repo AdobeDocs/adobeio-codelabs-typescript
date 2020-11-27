@@ -14,4 +14,4 @@ In this codelab, you have learned the following:
 
 Check out other useful codelabs for your projects at [Adobe I/O Codelabs website](https://adobedocs.github.io/adobeio-codelabs).
 
-More information about TypeScript can be found at the [TypeScript documentation website](https://www.typescriptlang.org/docs).
+More information about TypeScript can be found at the [TypeScript documentation website](https://www.TypeScriptlang.org/docs).

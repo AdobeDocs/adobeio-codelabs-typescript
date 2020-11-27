@@ -1,26 +1,24 @@
-## Lesson 2: Converting application to Typescript
+## Lesson 2: Converting application to TypeScript
 
-## Step one: move the code
-When we first generated the project the aio CLI created some default directorys for us to use and some boilerplate code as well.  We need to move this boilerplate and convert it to TypeScript. 
+### Step one: move the code
+When we first generated the project the aio CLI created some default directories for us to use and some boilerplate code as well.  We need to move this boilerplate and convert it to TypeScript. 
 
-First step is to rename the **actions** folder and rename it to **actions-src**.  
+First step is to rename the `actions` folder and rename it to `actions-src`.  
 ![Rename](assets/folder_move.png)
 
-## Step two: convert the code
+### Step two: convert the code
 We now need to convert the boilerplate code from Javascript to TypeScript.
 There should just be two files that we need to convert to TypeScript
-actions/tsaction/index.js
-actions/utils.js
+`actions/tsaction/index.js` and `actions/utils.js` 
 
-To convert these two files we start with changing the file extension from .js to .ts. 
-actions/tsaction/index.ts
-actions/utils.ts
+To convert these two files we start with changing the file extension from `.js` to `.ts.` 
+`actions/tsaction/index.ts` and `actions/utils.ts`
 
 ![TS to JS](assets/rename_js_ts.png)
 
-Now we need to modify the files starting with **utils.ts**
+Now we need to modify the files starting with `utils.ts`
 In this file we need to change all the functions to have an export keyword in front of them and we will remove the exports statement at the end of the file.
-Here is the final **utils.ts**
+Here is the final `utils.ts`
 ```javascript
 /* 
 * <license header>
@@ -162,12 +160,12 @@ import fetch from 'node-fetch'
 import { Core } from '@adobe/aio-sdk'
 import { errorResponse, getBearerToken, stringParameters, checkMissingRequestInputs } from '../utils'
 ```
-Now we need to change the main function and add on **export**
+Now we need to change the main function and add on `export`
 ```javascript
 export async function main (params) {
 ```
 
-Lastly we need to remove the exports statement from the end of the file.  Remove the line ***exports.main = main*** from the file.  We no longer need this export since we are exporting the function. 
+Lastly we need to remove the exports statement from the end of the file.  Remove the line `exports.main = main` from the file.  We no longer need this export since we are exporting the function. 
 
 
 [Next](build.md)

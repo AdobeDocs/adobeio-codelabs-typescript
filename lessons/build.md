@@ -1,8 +1,8 @@
-## Lesson 2: Tweaking the build to support Typescript
+## Lesson 3: Tweaking the build to support TypeScript
 
 What we are going to do to convert the project from Javascript to TypeScript is to move the actions directory from the cli templated project setup and rename that folder action-src.  Then we convert all the exiting template code to TypeScript.  Next we add in a pre app run hook that will transpile the TypeScript into Javascript and put the results back in the /actions directory.  The stock build process will take it from there and deploy the actions.  
 
-## Step one: add in project dependencies 
+### Step one: add in project dependencies 
 Add in [shx](https://www.npmjs.com/package/shx)
 Shx is a npm package that helps us use shell commands in a cross-platform manner.  We will be using shx to help us clean up the actions directory between builds.
 To install this npm module issue the following command from inside your projects home directory
@@ -10,13 +10,13 @@ To install this npm module issue the following command from inside your projects
 npm install shx --save-dev
 ```
 
-Add in typescript module
+Add in TypeScript module
 ```bash
-npm install typescript --save-dev
+npm install TypeScript --save-dev
 ```
 
 **Optional: Install type libraries and lint plugin**  
-Install some standard type librarys
+Install some standard type libraries
 ```bash
 npm install "@types/mime-types" --save-dev
 npm install "@types/node-fetch" --save-dev
@@ -25,29 +25,29 @@ npm install "@types/node" --save-dev
 
 Install the TypeScript lint plugin
 ```bash
-npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev eslint @TypeScript-eslint/parser @TypeScript-eslint/eslint-plugin
 ```
 
 Add lint config and ignore
-Create a new file in your project root named **.eslintrc**
-In the new **.eslintrc** file put the following content  
+Create a new file in your project root named `.eslintrc`
+In the new `.eslintrc` file put the following content  
 ```javascript
 {
     "root": true,
-    "parser": "@typescript-eslint/parser",
+    "parser": "@TypeScript-eslint/parser",
     "plugins": [
-      "@typescript-eslint"
+      "@TypeScript-eslint"
     ],
     "extends": [
       "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:@TypeScript-eslint/eslint-recommended",
+      "plugin:@TypeScript-eslint/recommended"
     ]
   }
 ```
 
-Create a new file in your project root named **.eslintignore**
-In the new **.eslintignore** file put the following content  
+Create a new file in your project root named `.eslintignore`
+In the new `.eslintignore` file put the following content  
 ```javascript
 node_modules
 actions
@@ -57,16 +57,16 @@ web-src
 ```
 
 Add lint scripts to package.json
-In the projects **package.json** add in the following lines to the scripts
+In the projects `package.json` add in the following lines to the scripts
 ```javascript
     "lint": "eslint \"actions-src/**/*.{js,ts}\" ",
     "lint-fix": "eslint \"actions-src/**/*.{js,ts}\" --quiet --fix"
 ```
 
 
-## Step two: modify the build hooks
+### Step two: modify the build hooks
 TypeScript will need some instructions on how you want it to transpile your TypeScript into Javascript and where to output it and all the nifty options to use.
-In your project directory create the following file **tsconfig.json** 
+In your project directory create the following file `tsconfig.json` 
 Then in this new file put the following config.  I have included a lot of the options in the file but they are commented out.  This file is intended to be a starting point and it would be something you tune and modify over time. 
 ```javascript
 {
@@ -74,7 +74,7 @@ Then in this new file put the following config.  I have included a lot of the op
         /* Basic Options */
         "module": "commonjs",  /*Specify module code generation: "None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext".  Only "AMD" and "System" can be used in conjunction with --outFile. "ES6" and "ES2015" values may be used when targeting "ES5" or lower.*/
         "target": "es5",  /*Specify ECMAScript target version: "ES3" (default),"ES5","ES6"/"ES2015","ES2016","ES2017","ES2018","ES2019","ES2020","ESNext"*/
-        //"lib": [ "es2015", "dom" ],  /*List of library files to be included in the compilation. see https://www.typescriptlang.org/docs/handbook/compiler-options.html */
+        //"lib": [ "es2015", "dom" ],  /*List of library files to be included in the compilation. see https://www.TypeScriptlang.org/docs/handbook/compiler-options.html */
         //"removeComments": true,
         //"resolveJsonModule": true,
         //"esModuleInterop": true,
@@ -143,10 +143,10 @@ Then in this new file put the following config.  I have included a lot of the op
     ]
 }
 ```
-The importiant bits of this config file are the **include** telling it to include TypeScript found **/actions-src/** directory. The other importiant bit is telling the transpiler what **module** type, the target type **target**, and the **output** directory for the transpiled code.  
+The important bits of this config file are the **include** telling it to include TypeScript found `/actions-src/` directory. The other important bit is telling the transpiler what **module** type, the target type **target**, and the **output** directory for the transpiled code.  
 
-## Step three: modify the build hooks
-Inside your project directory you will see a file named package.json.  Inside that file you will see a section named "scripts".  We are going to modify this to include two new scripts.  One for cleaning up the directorys we build into and another script to run before the aio run command.  
+### Step three: modify the build hooks
+Inside your project directory you will see a file named package.json.  Inside that file you will see a section named "scripts".  We are going to modify this to include two new scripts.  One for cleaning up the directories we build into and another script to run before the aio run command.  
 In package.json add in the following lines.
 ```javascript
 "pre-app-run": "npm run clean && tsc"
@@ -157,9 +157,9 @@ and add this line to handle cleanup
 ```javascript
 "clean": "shx rm -rf actions && shx echo Action Cleaning Done"
 ```
-This will use shx to remove recursivly the actions directory so we can put our new freshly transpiled TypeScript in there. 
+This will use shx to remove recursively the actions directory so we can put our new freshly transpiled TypeScript in there. 
 
-When your done your package.json scripts section should look simular to this
+When your done your package.json scripts section should look similar to this
 ```javascript
 "scripts": {
     "pre-app-run": "npm run clean && tsc",
@@ -169,10 +169,10 @@ When your done your package.json scripts section should look simular to this
   }
 ```
 
-## Step four: test and modify gitignore
+### Step four: test and modify gitignore
 
-To avoid checking in transpiled output you will want to modify **.gitignore** to include the TypeScript output directory.  In this case its the  actions directory so we will add that to the **.gitignore** config.
-The contents of **.gitignore** should look simular to this when your done.
+To avoid checking in transpiled output you will want to modify `.gitignore` to include the TypeScript output directory.  In this case its the  actions directory so we will add that to the `.gitignore` config.
+The contents of `.gitignore` should look similar to this when your done.
 ```javascript
 
 # package directories
@@ -217,13 +217,13 @@ actions
 
 ```
 
-Now lets try out the build by running the command **aio app run**
+Now lets try out the build by running the command `aio app run`
 ![AIO Run](assets/aio_run.png)
 
 
-If you installed the optional lint plugins you will also be able to run **npm run lint** or **npm run lint-fix**
+If you installed the optional lint plugins you will also be able to run `npm run lint` or `npm run lint-fix`
 ![NPM Lint](assets/lint.png)
-We have 16 Warnings to address but thats not a bad start. 
+We have 16 Warnings to address but that's not a bad start. 
 
 
-[Next](welldone.md)
+[Next](frontend.md)
