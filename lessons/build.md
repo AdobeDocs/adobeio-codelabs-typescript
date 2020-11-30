@@ -3,8 +3,7 @@
 What we are going to do to convert the project from Javascript to TypeScript is to move the actions directory from the cli templated project setup and rename that folder action-src.  Then we convert all the exiting template code to TypeScript.  Next we add in a pre app run hook that will transpile the TypeScript into Javascript and put the results back in the /actions directory.  The stock build process will take it from there and deploy the actions.  
 
 ### Step one: add in project dependencies 
-Add in [shx](https://www.npmjs.com/package/shx)
-Shx is a npm package that helps us use shell commands in a cross-platform manner.  We will be using shx to help us clean up the actions directory between builds.
+Add in [shx](https://www.npmjs.com/package/shx). Shx is a npm package that helps us use shell commands in a cross-platform manner.  We will be using shx to help us clean up the actions directory between builds.
 To install this npm module issue the following command from inside your projects home directory
 ```bash
 npm install shx --save-dev
