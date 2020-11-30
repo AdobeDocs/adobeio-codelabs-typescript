@@ -6,7 +6,7 @@ If you're using [React Spectrum](https://react-spectrum.adobe.com/) which is wri
 To use Typescript + React + JSX in your your `web-src` folder, you'll need to:                                                             
 * Use the `.tsx` extension
 * Properly require React
-* Add a tsconfig with a [special option](https://www.typescriptlang.org/docs/handbook/jsx.html) `"jsx": "react"` at the root of your Firefly project
+* Add a tsconfig with a [special option](https://www.typescriptlang.org/docs/handbook/jsx.html) `"jsx": "react"` at the root of `web-src` folder.
 
 ```json
 // tsconfig.json
