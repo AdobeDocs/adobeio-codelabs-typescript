@@ -12,7 +12,7 @@ npm install shx --save-dev
 
 Add in TypeScript module
 ```bash
-npm install TypeScript --save-dev
+npm install typescript --save-dev
 ```
 
 **Optional: Install type libraries and lint plugin**  
@@ -25,7 +25,7 @@ npm install "@types/node" --save-dev
 
 Install the TypeScript lint plugin
 ```bash
-npm install --save-dev eslint @TypeScript-eslint/parser @TypeScript-eslint/eslint-plugin
+npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 Add lint config and ignore
@@ -34,14 +34,14 @@ In the new `.eslintrc` file put the following content
 ```javascript
 {
     "root": true,
-    "parser": "@TypeScript-eslint/parser",
+    "parser": "@typescript-eslint/parser",
     "plugins": [
-      "@TypeScript-eslint"
+      "@typescript-eslint"
     ],
     "extends": [
       "eslint:recommended",
-      "plugin:@TypeScript-eslint/eslint-recommended",
-      "plugin:@TypeScript-eslint/recommended"
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
     ]
   }
 ```
@@ -74,7 +74,7 @@ Then in this new file put the following config.  I have included a lot of the op
         /* Basic Options */
         "module": "commonjs",  /*Specify module code generation: "None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext".  Only "AMD" and "System" can be used in conjunction with --outFile. "ES6" and "ES2015" values may be used when targeting "ES5" or lower.*/
         "target": "es5",  /*Specify ECMAScript target version: "ES3" (default),"ES5","ES6"/"ES2015","ES2016","ES2017","ES2018","ES2019","ES2020","ESNext"*/
-        //"lib": [ "es2015", "dom" ],  /*List of library files to be included in the compilation. see https://www.TypeScriptlang.org/docs/handbook/compiler-options.html */
+        //"lib": [ "es2015", "dom" ],  /*List of library files to be included in the compilation. see https://www.typescriptlang.org/docs/handbook/compiler-options.html */
         //"removeComments": true,
         //"resolveJsonModule": true,
         //"esModuleInterop": true,

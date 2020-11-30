@@ -2,7 +2,7 @@
 
 In order to create your barcode application, use the following command:
 ```bash
-aio app init adobeio-samples-TypeScript  
+aio app init adobeio-samples-typescript  
 ```
 We select the org, project and workspace for our app, and then be presented with a few options what you want your app to include (Serverless Actions, Web UI, CI/CD pipeline, I/O Events). Since we are building a headless app, we're only interested in using `Actions: Deploy Runtime actions`.
 ![Build Options](assets/init_options.png)

@@ -16,9 +16,9 @@ If not already done, you should follow the below links to have your environment 
 * [Setting up Your Environment](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md)
 * [Creating your First Firefly App](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md)
 
-* [Install TypeScript](https://www.TypeScriptlang.org/#installation)  Typically done with 
+* [Install TypeScript](https://www.typescriptlang.org/#installation)  Typically done with 
 ```Shell
-npm install -g TypeScript
+npm install -g typescript
 ```
 
 [Next](lesson1.md)
